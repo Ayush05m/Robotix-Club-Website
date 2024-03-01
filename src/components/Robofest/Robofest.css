@@ -89,6 +89,66 @@ a {
   background-color: #e6b030;
   width: 500px;
 }
+.anim{
+margin-top: 1em;
+}
+.anim1{
+  transform: translateX(00px);
+} 
+.anim2{
+  transform: translateX(00px);
+} 
+.anim3{
+  transform: translateX(0px);
+} 
+.anim4{
+  transform: translateX(00px);
+} 
+.anim5{
+  transform: translateX(00px);
+} 
+@media screen and (max-width: 800px) {
+  .anim1{
+    transform: translateX(0px);
+  } 
+  .anim2{
+    transform: translateX(0px);
+  } 
+  .anim3{
+    transform: translateX(0px);
+  } 
+  .anim4{
+    transform: translateX(0px);
+  } 
+  .anim5{
+    transform: translateX(0px);
+  } }
+@media screen and (max-width: 630px) {
+  .btn{
+   max-width: 300px; 
+  }
+  .fest_robo{
+    display: none;
+  }
+  .img{
+    display: none;
+  }
+  .fest{
+   min-height: 1500px;
+  }
+  .main1 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 760px) {
+  .fest{
+    min-height: 1500px;
+  }
+  .l-heading {
+    color: aliceblue;
+  }
+}
+
 
 .orange {
   color: rgb(2, 2, 2);

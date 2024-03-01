@@ -1,43 +1,9 @@
 import "./Robofest.css";
 
-// import { gsap } from "gsap";
 
-// import { CustomEase } from "gsap/CustomEase";
-// import { RoughEase, ExpoScaleEase, SlowMo } from "gsap/EasePack";
-
-// import { Flip } from "gsap/Flip";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import { Observer } from "gsap/Observer";
-// import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-// import { Draggable } from "gsap/Draggable";
-// import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-// import { EaselPlugin } from "gsap/EaselPlugin";
-// import { PixiPlugin } from "gsap/PixiPlugin";
-// import { TextPlugin } from "gsap/TextPlugin";
 
 function Robofest() {
-  //   gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin,RoughEase,ExpoScaleEase,SlowMo,CustomEase);
 
-  //   const testDesc = document.querySelector(".description");
-  // const imageDesc = document.querySelector(".photo-descriptive");
-  // const cofee = document.querySelector(".cofee");
-  // const title = document.querySelector(".l-heading");
-
-  // const tl = gsap.timeline({ defaults: { duration: 1 } });
-  // tl.from(".anim1", { y: -50, opacity: 0, stagger: 0.4 })
-  //   .from("aside", { backgroundPosition: "200px", opacity: 0 }, "-=1")
-  //   .from(
-  //     cofee,
-  //     {
-  //       y: 20,
-  //       opacity: 0
-  //     },
-  //     "-=0.2"
-  //   );
-
-  // document.querySelector(".btn").addEventListener("click", () => {
-  //   tl.reversed() ? tl.play() : tl.reverse();
-  // });
 
   return (
     <>
@@ -88,8 +54,22 @@ function Robofest() {
               big gathering of smart and creative people who love playing with
               robots and pushing the limits of what they can do.
             </p>
-            <a href="#" className="btn anim1 orange">
-             Registration Link
+            <a href="https://forms.gle/tZy6hTWUnGVxKGDt8" className="btn anim  anim1 orange">
+             ROBOEXPO
+            </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3nyKN3mRB-nlX7La6hotLO6t6bAidR3qNHwf6EoDdieuqaA/viewform?usp=sf_link" className="btn anim anim2  orange">
+             ROBOFIGHT
+            </a>
+            <a href="https://forms.gle/f4r5HykFZKjb4u22A" className="btn anim anim3  orange">
+             ROBORACE
+            </a>
+            <a href="https://forms.gle/trhjq9FcVsYbh2wk8" className="btn anim anim4  orange">
+             IDEATHON
+            </a>
+            <a href="https://forms.gle/HY1y2kpR5q7BguX46" className="btn anim anim5 orange">
+             ROBOTHON
+            </a><a href="https://drive.google.com/file/d/1LB7Ou_u5NXkioI-9McxO-qxtz9Wx42a9/view?usp=drivesdk" className="lnk ">
+             Problems statement Link
             </a>
           </div>
           <div className="imge">

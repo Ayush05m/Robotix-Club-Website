@@ -1,7 +1,10 @@
-import { useEffect } from 'react'
 
 
-import { useRef } from "react";
+import React, { memo, useState, useEffect } from 'react';
+
+
+import  {  useRef } from "react";
+
 import "./Home.css"
 
 import Robofest from '../Robofest/Robofest';
@@ -25,13 +28,13 @@ import { TextPlugin } from "gsap/TextPlugin";
 
 function Home() {
   console.clear();
-  gsap.registerPlugin(Flip, ScrollTrigger, Observer, ScrollToPlugin, Draggable, MotionPathPlugin, EaselPlugin, PixiPlugin, TextPlugin, RoughEase, ExpoScaleEase, SlowMo, CustomEase);
-
-
-
-
+  gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin,RoughEase,ExpoScaleEase,SlowMo,CustomEase);
+  
+  
+  
+  
   // About Section
-
+  
   function triggerLaunch() {
     console.log("launch");
     document.body.classList.remove("overflow-hidden");
@@ -185,4 +188,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default memo(Home);

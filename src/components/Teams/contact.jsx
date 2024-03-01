@@ -27,41 +27,36 @@ const ContactForm = () => {
   return (
     <div className="contact-us-container">
       <form onSubmit={handleSubmit}>
-        <label className='labels'>
-          <p>Name </p>
+        <label>
+          Name:
           <input
             type="text"
             name="name"
             value={formData.name}
             onChange={handleChange}
             required
-            placeholder='Type your name....'
           />
         </label>
-        <label className='labels'>
-          <p>Email </p>
+        <label>
+          Email:
           <input
             type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
             required
-            placeholder='Type your email address....'
           />
         </label>
         <label>
-          <p>Message </p>
+          Message:
           <textarea
             name="message" className='m'
             value={formData.message}
             onChange={handleChange}
             required
-            placeholder='Express Yourself....'
           />
         </label>
-        <div className='buttons'>
-          <button type="submit" className='button'>Submit</button>
-        </div>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

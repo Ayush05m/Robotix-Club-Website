@@ -10,6 +10,9 @@
   z-index: 9999;
 
 }
+.nav-title{
+  color: aliceblue;
+}
 
 .navbar_normal {
   padding: 1rem 2rem;

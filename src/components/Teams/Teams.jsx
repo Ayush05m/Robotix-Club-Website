@@ -183,7 +183,8 @@ const TeamPage = () => {
           <hr className='horizontal'/>
         {/* Contact Form Section */}
         <div className="section">
-        <h2 className="section-heading5"><span>CONTACT</span> US
+          <h2 className="section-heading5">
+            <span>CONTACT </span>US
           </h2>
           <ContactForm />
         </div>

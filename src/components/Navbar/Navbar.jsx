@@ -10,13 +10,13 @@ export default function Navbar() {
     <nav className={`${isOpen ? "navbar_expand" : "navbar_normal"} navbar`}>
       <div className="flexbox">
 
-      <h2 >Robotix Club</h2>
+      <h2 className="nav-title">Robotix Club</h2>
       <div className={`${isOpen ? "display-nav" : "displayno"} navbar`}>
-      <Link to="/">home</Link>
-      <Link to="/about">about</Link>
-      <Link to="/events">event</Link>
-      <Link to="/project">project</Link>
-      <Link to="/teams">Team</Link>
+      <Link to="/">HOME</Link>
+      <Link to="/about">ABOUT</Link>
+      <Link to="/events">EVENT</Link>
+      <Link to="/project">PROJECT</Link>
+      <Link to="/teams">TEAM</Link>
       </div></div>
 
       {isOpen ? (
