@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { useTypewriter } from "react-simple-typewriter";
+// import { useTypewriter } from "react-simple-typewriter";
 import "./Projects.css";
 
 import logo from "../Projects/ROBO.gif";
