@@ -1,4 +1,4 @@
-import EventList from './components/EventList/EventList';
+import EventList from './components/EventList/EventList.jsx';
 
 import './Events.css'
 

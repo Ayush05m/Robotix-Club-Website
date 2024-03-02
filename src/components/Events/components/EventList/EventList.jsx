@@ -5,7 +5,7 @@ import './EventList.css'
 
 const EventList = (...eventDetails) => {
   const targetRef = useRef(null);
-  // console.log(typeof(eventDetails));
+  const cover = useRef(null);
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const togglePopUp = () => {
@@ -21,54 +21,46 @@ const EventList = (...eventDetails) => {
     scaleX: "-1"
   });
 
+  useEffect(() => {
+    const eventCover = document.querySelectorAll('.eventCover');
+    for (let i = 0; i < eventCover.length; i++) {
+      if (i % 2 != 0) {
+        eventCover[i].classList.add("eventCoverReverse");
+      }
+    }
+    // console.log(eventCover.);
+  }, []);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const pSib = entry.target.previousElementSibling
-            const eventIn = entry.target.querySelector(".eventIn");
-            if (pSib == null) {
-              entry.target.classList.add("slideRightIn");
-              eventIn.classList.add("hoveredRight");
-            }
-            else {
-              const prevSib = pSib.previousElementSibling;
-              if (!(prevSib.classList.contains("slideRightIn") && prevSib.classList.contains("slideleftIn"))) {
-                if (prevSib.classList.contains("slideLeftIn")) {
-                  entry.target.classList.add("slideRightIn");
-                  eventIn.classList.add("hoveredRight");
-                } else {
-                  entry.target.classList.add("slideLeftIn");
-                  eventIn.classList.add("hoveredLeft");
-                }
-              }
-            }
-          }
-        });
-      },
-      {
-        threshold: 0.6,
-      }
-    );
-
-    observer.observe(targetRef.current);
+    const eventImage = document.querySelectorAll(".eventIn");
+    for (let i = 0; i < eventImage.length; i++){
+      eventImage[i].style.height = eventImage[i].offsetWidth - 50 + "px";
+      console.log(eventImage.offsetHeight);
+    }
   }, []);
 
   return (
     <>
       <div className="eventCard" ref={targetRef} onClick={togglePopUp}>
-        <div className="rotatory">
-          <div className="eventIn" style={pseudoElement}>
-            <div className="innerBox">
-              <h1>{eventDetails[0].title}</h1>
-              <p>Date: {eventDetails[0].date}</p>
+
+        <div className="eventCover" >
+          <div className="innerBox">
+            <h1>{eventDetails[0].title}</h1>
+            <p>Date: {eventDetails[0].date}</p>
+
+          </div>
+          <div className="gapper"></div>
+          <div className="image">
+            <div className="rotatory">
+              <div className="eventIn" style={pseudoElement}>
+                <p>Venue: {eventDetails[0].venue}</p>
+              </div>
             </div>
           </div>
         </div>
+
+        <div className="breaker"></div>
       </div>
-      <div className="breaker"></div>
       {isPopupOpen && (<EventPopUp onClose={togglePopUp} {...eventDetails} />)}
     </>
   );
